@@ -48,8 +48,17 @@ namespace DinamikCV.Controllers
             return PartialView(sertifikalar);
         }
 
+        [HttpGet]
         public PartialViewResult Iletisim()
         {
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult Iletisim(tbliletisim t)
+        {
+            db.tbliletisim.Add(t);
+            db.SaveChanges();
+
             return PartialView();
         }
     }
