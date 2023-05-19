@@ -56,6 +56,7 @@ namespace DinamikCV.Controllers
         [HttpPost]
         public PartialViewResult Iletisim(tbliletisim t)
         {
+            t.Tarih =DateTime.Parse( DateTime.Now.ToShortDateString()); 
             db.tbliletisim.Add(t);
             db.SaveChanges();
 
