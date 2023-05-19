@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBCVModelStoreContainer" CdmEntityContainer="DBCVEntities">
+    <EntitySetMapping Name="tblAdmin">
+      <EntityTypeMapping TypeName="DBCVModel.tblAdmin">
+        <MappingFragment StoreEntitySet="tblAdmin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDeneyimlerim">
+      <EntityTypeMapping TypeName="DBCVModel.tblDeneyimlerim">
+        <MappingFragment StoreEntitySet="tblDeneyimlerim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="AltBaslik" ColumnName="AltBaslik" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEgitimlerim">
+      <EntityTypeMapping TypeName="DBCVModel.tblEgitimlerim">
+        <MappingFragment StoreEntitySet="tblEgitimlerim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="AltBaslik1" ColumnName="AltBaslik1" />
+          <ScalarProperty Name="AltBaslik2" ColumnName="AltBaslik2" />
+          <ScalarProperty Name="GNO" ColumnName="GNO" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHakkimda">
+      <EntityTypeMapping TypeName="DBCVModel.tblHakkimda">
+        <MappingFragment StoreEntitySet="tblHakkimda">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHobilerim">
+      <EntityTypeMapping TypeName="DBCVModel.tblHobilerim">
+        <MappingFragment StoreEntitySet="tblHobilerim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
+          <ScalarProperty Name="Aciklama2" ColumnName="Aciklama2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbliletisim">
+      <EntityTypeMapping TypeName="DBCVModel.tbliletisim">
+        <MappingFragment StoreEntitySet="tbliletisim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSertifikalarım">
+      <EntityTypeMapping TypeName="DBCVModel.tblSertifikalarım">
+        <MappingFragment StoreEntitySet="tblSertifikalarım">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblYeteneklerim">
+      <EntityTypeMapping TypeName="DBCVModel.tblYeteneklerim">
+        <MappingFragment StoreEntitySet="tblYeteneklerim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
