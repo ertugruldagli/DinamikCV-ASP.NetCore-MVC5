@@ -17,5 +17,18 @@ namespace DinamikCV.Controllers
 
             return View(degerler);
         }
+
+        public PartialViewResult Deneyim()
+        {
+            var deneyimler =db.tblDeneyimlerim.ToList();
+            return PartialView(deneyimler);
+
+        }
+
+        public PartialViewResult Egitim()
+        {
+            var egitimler= db.tblEgitimlerim.ToList();
+            return PartialView(egitimler);
+        }
     }
 }
