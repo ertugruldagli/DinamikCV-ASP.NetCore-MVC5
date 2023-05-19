@@ -1,0 +1,14 @@
+﻿@using DinamikCV.Models.Entity
+@model List<tblSertifikalarım>
+<div class="resume-section-content">
+    <h2 class="mb-5">Ödüller ve Sertifikalar</h2>
+    @foreach (var item in Model) {
+    <ul class="fa-ul mb-0">
+        <li>
+            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+            @item.Aciklama
+        </li>
+       
+    </ul>
+    }
+</div>
