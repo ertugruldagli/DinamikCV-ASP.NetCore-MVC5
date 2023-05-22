@@ -8,6 +8,6 @@ namespace DinamikCV.Repositories
 {
     public class DeneyimRepository:GenericRepository<tblDeneyimlerim>
     {
-        DBCVEntities dbCVEntities=new DBCVEntities();
+        
     }
 }
