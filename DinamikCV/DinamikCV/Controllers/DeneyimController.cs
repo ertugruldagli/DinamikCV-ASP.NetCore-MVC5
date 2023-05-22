@@ -24,7 +24,7 @@ namespace DinamikCV.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult DeneyimEkele(tblDeneyimlerim p)
+        public ActionResult DeneyimEkle(tblDeneyimlerim p)
         {
            dRepo.TAdd(p);
             return RedirectToAction("Index");
