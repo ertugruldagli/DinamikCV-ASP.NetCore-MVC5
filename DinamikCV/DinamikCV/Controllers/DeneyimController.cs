@@ -29,5 +29,12 @@ namespace DinamikCV.Controllers
            dRepo.TAdd(p);
             return RedirectToAction("Index");
         }
+
+        public ActionResult DeneyimSil (int id)
+        {
+            tblDeneyimlerim t = dRepo.Find(x=> x.ID==id);
+            dRepo.TRemove(t);
+            return RedirectToAction("Index");
+        }
     }
 }
