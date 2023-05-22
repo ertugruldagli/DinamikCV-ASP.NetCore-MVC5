@@ -6,7 +6,7 @@ using System.Web;
 
 namespace DinamikCV.Repositories
 {
-    public class DeneyimRepository
+    public class DeneyimRepository:GenericRepository<tblDeneyimlerim>
     {
         DBCVEntities dbCVEntities=new DBCVEntities();
     }
