@@ -43,5 +43,18 @@ namespace DinamikCV.Controllers
             return View(t);
 
         }
+        [HttpPost]
+        public ActionResult DeneyimGetir(tblDeneyimlerim p)
+        {
+            tblDeneyimlerim t = dRepo.Find(x => x.ID == p.ID);
+            t.ID= p.ID;
+            t.Baslik= p.Baslik;
+            t.AltBaslik=p.AltBaslik;
+            t.Tarih=p.Tarih;
+            t.Aciklama=p.Aciklama;
+            dRepo.TUpdate(t);
+            return RedirectToAction("Index");
+
+        }
     }
 }
