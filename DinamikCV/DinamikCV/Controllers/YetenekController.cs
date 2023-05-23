@@ -20,5 +20,24 @@ namespace DinamikCV.Controllers
             var degerler = yRepo.TList();
             return View(degerler);
         }
+        [HttpGet]
+        public ActionResult YetenekEkle()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YetenekEkle(tblYeteneklerim p)
+        {
+             yRepo.TAdd(p);
+                
+            return RedirectToAction("Index");   
+        }
+
+        public  ActionResult YetenekSil(int id)
+        {
+            tblYeteneklerim t = yRepo.Find(x => x.ID == id);
+            yRepo.TRemove(t);
+            return RedirectToAction("Index");
+        }
     }
 }

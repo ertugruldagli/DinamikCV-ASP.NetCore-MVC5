@@ -2348,6 +2348,7 @@
     <Content Include="Views\Deneyim\DeneyimEkle.cshtml" />
     <Content Include="Views\Deneyim\DeneyimGetir.cshtml" />
     <Content Include="Views\Yetenek\Index.cshtml" />
+    <Content Include="Views\Yetenek\YetenekEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
