@@ -39,5 +39,22 @@ namespace DinamikCV.Controllers
             yRepo.TRemove(t);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult YetenekGuncelle(int id)
+        {
+            tblYeteneklerim t = yRepo.Find(x => x.ID == id);
+            return View(t);
+
+        }
+        [HttpPost]
+        public ActionResult YetenekGuncelle(tblYeteneklerim p)
+        {
+            tblYeteneklerim t = yRepo.Find(x => x.ID == p.ID);
+            t.ID = p.ID;
+            t.Yetenek = p.Yetenek;
+            t.Oran = p.Oran;
+            yRepo.TUpdate(t);
+            return RedirectToAction("Index");
+        }    
     }
 }
