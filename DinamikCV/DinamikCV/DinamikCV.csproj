@@ -2352,6 +2352,7 @@
     <Content Include="Views\Yetenek\YetenekEkle.cshtml" />
     <Content Include="Views\Yetenek\YetenekGuncelle.cshtml" />
     <Content Include="Views\Egitim\Index.cshtml" />
+    <Content Include="Views\Egitim\EgitimEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

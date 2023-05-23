@@ -17,5 +17,16 @@ namespace DinamikCV.Controllers
             var egitimlerim = eRepo.TList();
             return View(egitimlerim);
         }
+        [HttpGet]
+        public ActionResult EgitimEkle()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult EgitimEkle(tblEgitimlerim p) 
+        { 
+            eRepo.TAdd(p);
+            return RedirectToAction ("Index");  
+        }
     }
 }
