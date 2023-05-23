@@ -47,8 +47,8 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Aciklama1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Aciklama2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="tbliletisim">
     <Key>
@@ -74,6 +74,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Yetenek" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Oran" Type="Byte" />
   </EntityType>
   <EntityContainer Name="DBCVEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tblAdmin" EntityType="Self.tblAdmin" />

@@ -79,6 +79,7 @@
     <EntitySetMapping Name="tblYeteneklerim">
       <EntityTypeMapping TypeName="DBCVModel.tblYeteneklerim">
         <MappingFragment StoreEntitySet="tblYeteneklerim">
+          <ScalarProperty Name="Oran" ColumnName="Oran" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
         </MappingFragment>

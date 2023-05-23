@@ -47,8 +47,8 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Aciklama1" Type="varchar" MaxLength="100" />
-    <Property Name="Aciklama2" Type="varchar" MaxLength="100" />
+    <Property Name="Aciklama1" Type="varchar" MaxLength="500" />
+    <Property Name="Aciklama2" Type="varchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="tbliletisim">
     <Key>
@@ -74,6 +74,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Yetenek" Type="varchar" MaxLength="100" />
+    <Property Name="Oran" Type="tinyint" />
   </EntityType>
   <EntityContainer Name="DBCVModelStoreContainer">
     <EntitySet Name="tblAdmin" EntityType="Self.tblAdmin" Schema="dbo" store:Type="Tables" />
