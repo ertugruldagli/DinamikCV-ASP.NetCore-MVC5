@@ -5,6 +5,8 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@{ string color = " "; }
+@{ string labelColor = "";}
 
 <!DOCTYPE html>
 <html>
@@ -29,23 +31,47 @@
                                             <th>Yetenek</th>
                                             <th>Derece</th>
                                             <th style="width: 40px">Oran</th>
+                                            <th>Sil</th>
+                                            <th>Düzenle</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach (var item in Model)
                                         {
+                                            if (item.Oran<=55) {
+                                                color = "progress-bar bg-danger";
+                                                labelColor = "badge bg-danger";
+                                            }
+                                            if (item.Oran >=56 && item.Oran <=75)
+                                            {
+                                                color = "progress-bar bg-primary";
+                                                labelColor = "badge bg-primary";
+                                            }
+                                            if (item.Oran >= 76 && item.Oran <= 90)
+                                            {
+                                                color = "progress-bar bg-success";
+                                                labelColor = "badge bg-success";
+                                            }
+                                            if (item.Oran >= 91 && item.Oran <= 100)
+                                            {
+                                                color = "progress-bar bg-warning";
+                                                labelColor = "badge bg-warning";
+                                            }
+
 
                                             <tr>
                                                 <td>1.</td>
                                                 <td>@item.Yetenek</td>
                                                 <td>
                                                     <div class="progress progress-xs">
-                                                        <div class="progress-bar progress-bar-warning" style="width: @item.Oran%"></div>
+                                                        <div class="@color" style="width: @item.Oran%"></div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge bg-warning">@item.Oran%</span></td>
+                                                <td><span class="@labelColor">@item.Oran%</span></td>
+                                                <td> <a href="#" class="btn btn-default"> Sil </a></td>
+                                                <td> <a href="#" class="btn btn-default"> Duzenle </a></td>
                                             </tr>
-                                        }
+                                         }
                                     </tbody>
                                 </table>
                             </div>
