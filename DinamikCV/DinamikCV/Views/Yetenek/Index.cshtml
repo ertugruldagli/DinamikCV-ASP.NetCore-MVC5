@@ -20,10 +20,17 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Yetenek Listem</h3>
+                                <h2 class="card-title">Yetenek Listem</h2>
+                                
+                                
                             </div>
                             <!-- /.card-header -->
+                           
                             <div class="card-body">
+                                
+                                <a href="#" class="btn btn-info">Yetenek Ekle</a>
+                                <br />
+                                <br />
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -31,18 +38,19 @@
                                             <th>Yetenek</th>
                                             <th>Derece</th>
                                             <th style="width: 40px">Oran</th>
-                                            <th>Sil</th>
-                                            <th>Düzenle</th>
+                                            <th>İşlemler</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach (var item in Model)
                                         {
-                                            if (item.Oran<=55) {
+                                            if (item.Oran <= 55)
+                                            {
                                                 color = "progress-bar bg-danger";
                                                 labelColor = "badge bg-danger";
                                             }
-                                            if (item.Oran >=56 && item.Oran <=75)
+                                            if (item.Oran >= 56 && item.Oran <= 75)
                                             {
                                                 color = "progress-bar bg-primary";
                                                 labelColor = "badge bg-primary";
@@ -68,10 +76,12 @@
                                                     </div>
                                                 </td>
                                                 <td><span class="@labelColor">@item.Oran%</span></td>
-                                                <td> <a href="#" class="btn btn-default"> Sil </a></td>
-                                                <td> <a href="#" class="btn btn-default"> Duzenle </a></td>
+                                                <td>
+                                                    <a href="#" class="btn btn-default"> Sil </a>
+                                                    <a href="#" class="btn btn-default"> Duzenle </a>
+                                                </td>
                                             </tr>
-                                         }
+                                        }
                                     </tbody>
                                 </table>
                             </div>
