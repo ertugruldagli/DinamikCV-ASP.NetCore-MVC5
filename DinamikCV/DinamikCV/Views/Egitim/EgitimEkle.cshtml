@@ -10,6 +10,7 @@
 <form method="post">
     @Html.Label("Baslik")
     @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x=>x.Baslik,"", new {@style="color:red" })
     <br />
     @Html.Label("AltBaslik1")
     @Html.TextBoxFor(x => x.AltBaslik1, new { @class = "form-control" })
