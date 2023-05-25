@@ -24,7 +24,11 @@ namespace DinamikCV.Controllers
         }
         [HttpPost]
         public ActionResult EgitimEkle(tblEgitimlerim p) 
-        { 
+        {
+            if (!ModelState.IsValid)
+            {
+                return View ("EgitimEkle");
+            }
             eRepo.TAdd(p);
             return RedirectToAction ("Index");  
         }
