@@ -20,6 +20,7 @@
     <br />
     @Html.Label("GNO")
     @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x=>x.GNO, " ", new {@style="color:green"})
     <br />
     @Html.Label("Tarih")
     @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
