@@ -1,0 +1,36 @@
+﻿@model DinamikCV.Models.Entity.tblEgitimlerim
+@{
+    ViewBag.Title = "EgitimGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>EgitimGuncelle</h2>
+
+<br />
+
+<form method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+
+    @Html.Label("Baslik")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("AltBaslik1")
+    @Html.TextBoxFor(x => x.AltBaslik1, new { @class = "form-control" })
+    <br />
+    @Html.Label("AltBaslik2")
+    @Html.TextBoxFor(x => x.AltBaslik2, new { @class = "form-control" })
+    <br />
+    @Html.Label("GNO")
+    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-info">  Bilgileri Guncelle </button>
+
+</form>
