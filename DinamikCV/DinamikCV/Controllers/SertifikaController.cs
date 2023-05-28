@@ -20,18 +20,30 @@ namespace DinamikCV.Controllers
         [HttpGet]
         public ActionResult SertifikaGuncelle(int id)
         {
-            var t = sRepo.Find(x=>x.ID==id);
+            tblSertifikalarım t = sRepo.Find(x=>x.ID==id);
             return View(t);
         }
         [HttpPost]
         public ActionResult SertifikaGuncelle(tblSertifikalarım p) 
         {
-            var t = sRepo.Find(x => x.ID ==p.ID);
+            tblSertifikalarım t = sRepo.Find(x => x.ID ==p.ID);
 
             t.ID= p.ID;
             t.Aciklama = p.Aciklama;
             t.Tarih= p.Tarih;
             sRepo.TUpdate(t);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult SertifikaEkle()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult SertifikaEkle(tblSertifikalarım p)
+        {
+            sRepo.TAdd(p);
             return RedirectToAction("Index");
         }
     }

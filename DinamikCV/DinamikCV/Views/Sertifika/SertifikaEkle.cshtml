@@ -1,10 +1,10 @@
 ﻿@model DinamikCV.Models.Entity.tblSertifikalarım
 @{
-    ViewBag.Title = "SertifikaGuncelle";
+    ViewBag.Title = "SertifikaEkle";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>SertifikaGuncelle</h2>
+<h2>SertifikaEkle</h2>
 
 
 @Html.Label("Acıklama")
@@ -14,6 +14,6 @@
 @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
 <br />
 
-<button class="btn btn-info"> Guncelle </button>
+<button class="btn btn-info"> Kaydet </button>
 
 </form>

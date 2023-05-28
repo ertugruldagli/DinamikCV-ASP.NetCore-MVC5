@@ -2357,6 +2357,7 @@
     <Content Include="Views\Egitim\EgitimGuncelle.cshtml" />
     <Content Include="Views\Sertifika\Index.cshtml" />
     <Content Include="Views\Sertifika\SertifikaGuncelle.cshtml" />
+    <Content Include="Views\Sertifika\SertifikaEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
