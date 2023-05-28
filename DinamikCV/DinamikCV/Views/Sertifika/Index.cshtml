@@ -28,9 +28,11 @@
                                         <!-- timeline time label -->
                                         @foreach (var item in Model) {
                                         <div class="time-label">
-                                            <span class="bg-success">
-                                                @item.Tarih
-                                            </span>
+                                            <a href="/Sertifika/SertifikaGuncelle/@item.ID">
+                                                <span class=" btn btn-success ">
+                                                    @item.Tarih
+                                                </span>
+                                            </a>
                                         </div>
                                         <!-- /.timeline-label -->
                                         <!-- timeline item -->
