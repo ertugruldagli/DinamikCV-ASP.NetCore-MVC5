@@ -21,6 +21,7 @@ namespace DinamikCV.Controllers
         public ActionResult SertifikaGuncelle(int id)
         {
             tblSertifikalarım t = sRepo.Find(x=>x.ID==id);
+            ViewBag.d = id;
             return View(t);
         }
         [HttpPost]
@@ -46,5 +47,11 @@ namespace DinamikCV.Controllers
             sRepo.TAdd(p);
             return RedirectToAction("Index");
         }
+        public ActionResult SertifikaSil(int id) 
+        {
+            var sertifika = sRepo.Find(x=>x.ID==id);
+            sRepo.TRemove(sertifika);
+            return RedirectToAction("Index");   
+        }   
     }
 }
