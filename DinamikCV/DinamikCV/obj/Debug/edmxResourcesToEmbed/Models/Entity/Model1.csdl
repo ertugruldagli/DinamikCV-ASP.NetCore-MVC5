@@ -67,6 +67,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Tarih" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="tblYeteneklerim">
     <Key>

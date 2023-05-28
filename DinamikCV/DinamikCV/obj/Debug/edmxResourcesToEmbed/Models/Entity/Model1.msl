@@ -71,6 +71,7 @@
     <EntitySetMapping Name="tblSertifikalarım">
       <EntityTypeMapping TypeName="DBCVModel.tblSertifikalarım">
         <MappingFragment StoreEntitySet="tblSertifikalarım">
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
         </MappingFragment>

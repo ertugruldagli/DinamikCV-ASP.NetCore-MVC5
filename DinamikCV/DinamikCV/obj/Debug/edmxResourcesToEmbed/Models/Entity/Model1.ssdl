@@ -67,6 +67,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Aciklama" Type="varchar" MaxLength="250" />
+    <Property Name="Tarih" Type="varchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="tblYeteneklerim">
     <Key>
