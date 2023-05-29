@@ -69,6 +69,15 @@
     <Property Name="Aciklama" Type="varchar" MaxLength="250" />
     <Property Name="Tarih" Type="varchar" MaxLength="30" />
   </EntityType>
+  <EntityType Name="tblSosyalMedya">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="varchar" MaxLength="30" />
+    <Property Name="Link" Type="varchar" MaxLength="50" />
+    <Property Name="ikon" Type="varchar" MaxLength="30" />
+  </EntityType>
   <EntityType Name="tblYeteneklerim">
     <Key>
       <PropertyRef Name="ID" />
@@ -85,6 +94,7 @@
     <EntitySet Name="tblHobilerim" EntityType="Self.tblHobilerim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbliletisim" EntityType="Self.tbliletisim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblSertifikalarım" EntityType="Self.tblSertifikalarım" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSosyalMedya" EntityType="Self.tblSosyalMedya" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblYeteneklerim" EntityType="Self.tblYeteneklerim" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

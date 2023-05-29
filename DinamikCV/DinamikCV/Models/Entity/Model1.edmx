@@ -74,6 +74,15 @@
           <Property Name="Aciklama" Type="varchar" MaxLength="250" />
           <Property Name="Tarih" Type="varchar" MaxLength="30" />
         </EntityType>
+        <EntityType Name="tblSosyalMedya">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="varchar" MaxLength="30" />
+          <Property Name="Link" Type="varchar" MaxLength="50" />
+          <Property Name="ikon" Type="varchar" MaxLength="30" />
+        </EntityType>
         <EntityType Name="tblYeteneklerim">
           <Key>
             <PropertyRef Name="ID" />
@@ -90,6 +99,7 @@
           <EntitySet Name="tblHobilerim" EntityType="Self.tblHobilerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbliletisim" EntityType="Self.tbliletisim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblSertifikalarım" EntityType="Self.tblSertifikalarım" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSosyalMedya" EntityType="Self.tblSosyalMedya" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblYeteneklerim" EntityType="Self.tblYeteneklerim" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -182,7 +192,17 @@
           <EntitySet Name="tbliletisim" EntityType="Self.tbliletisim" />
           <EntitySet Name="tblSertifikalarım" EntityType="Self.tblSertifikalarım" />
           <EntitySet Name="tblYeteneklerim" EntityType="Self.tblYeteneklerim" />
+          <EntitySet Name="tblSosyalMedya" EntityType="DBCVModel.tblSosyalMedya" />
         </EntityContainer>
+        <EntityType Name="tblSosyalMedya">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ikon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -271,6 +291,16 @@
                 <ScalarProperty Name="Oran" ColumnName="Oran" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSosyalMedya">
+            <EntityTypeMapping TypeName="DBCVModel.tblSosyalMedya">
+              <MappingFragment StoreEntitySet="tblSosyalMedya">
+                <ScalarProperty Name="ikon" ColumnName="ikon" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -24,6 +24,12 @@ namespace DinamikCV.Controllers
             return PartialView(deneyimler);
 
         }
+        public PartialViewResult SosyalMedya()
+        {
+            var smedya = db.tblSosyalMedya.ToList();
+            return PartialView(smedya);
+
+        }
 
         public PartialViewResult Egitim()
         {

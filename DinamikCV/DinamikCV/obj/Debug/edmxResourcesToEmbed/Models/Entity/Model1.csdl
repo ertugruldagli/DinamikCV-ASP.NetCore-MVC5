@@ -86,5 +86,15 @@
     <EntitySet Name="tbliletisim" EntityType="Self.tbliletisim" />
     <EntitySet Name="tblSertifikalarım" EntityType="Self.tblSertifikalarım" />
     <EntitySet Name="tblYeteneklerim" EntityType="Self.tblYeteneklerim" />
+    <EntitySet Name="tblSosyalMedya" EntityType="DBCVModel.tblSosyalMedya" />
   </EntityContainer>
+  <EntityType Name="tblSosyalMedya">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ikon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>
