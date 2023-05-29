@@ -28,7 +28,7 @@
                                         @foreach (var item in Model) {
                                         <div class="time-label">
                                             <span class="bg-info">
-                                                @item.Tarih
+                                               @(((DateTime)item.Tarih).ToString("dd-MMM-yyyy"))
                                             </span>
                                         </div>
 
