@@ -38,11 +38,20 @@ namespace DinamikCV.Controllers
         public ActionResult SayfaGuncelle(tblSosyalMedya p)
         {
             var veriler = sRepo.Find(x => x.ID == p.ID);
+            veriler.Durum = true;
             veriler.Ad=p.Ad;    
             veriler.Link=p.Link;    
             veriler.ikon=p.ikon;
             sRepo.TUpdate(veriler);
             return RedirectToAction("Index");
+        }
+        public ActionResult SayfaSil(int id)
+        {
+            var veriler = sRepo.Find(x => x.ID == id);
+            veriler.Durum = false;
+            sRepo.TUpdate(veriler);
+            return RedirectToAction("Index");
+            return View(veriler);
         }
     }
 }

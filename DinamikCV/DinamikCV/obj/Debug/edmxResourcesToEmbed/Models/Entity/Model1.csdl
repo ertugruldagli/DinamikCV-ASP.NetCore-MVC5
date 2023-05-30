@@ -96,5 +96,6 @@
     <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ikon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Durum" Type="Boolean" />
   </EntityType>
 </Schema>

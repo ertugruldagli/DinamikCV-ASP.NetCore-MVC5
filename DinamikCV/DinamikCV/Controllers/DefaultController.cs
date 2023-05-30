@@ -26,7 +26,7 @@ namespace DinamikCV.Controllers
         }
         public PartialViewResult SosyalMedya()
         {
-            var smedya = db.tblSosyalMedya.ToList();
+            var smedya = db.tblSosyalMedya.Where(x=>x.Durum==true).ToList();
             return PartialView(smedya);
 
         }

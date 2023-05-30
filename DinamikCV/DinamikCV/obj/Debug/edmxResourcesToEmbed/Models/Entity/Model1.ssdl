@@ -77,6 +77,7 @@
     <Property Name="Ad" Type="varchar" MaxLength="30" />
     <Property Name="Link" Type="varchar" MaxLength="50" />
     <Property Name="ikon" Type="varchar" MaxLength="30" />
+    <Property Name="Durum" Type="bit" />
   </EntityType>
   <EntityType Name="tblYeteneklerim">
     <Key>

@@ -38,6 +38,7 @@
 
 
                                             <th>Sosyal Medya</th>
+                                            <th>Durum</th>
                                             <th>İşlemler</th>
 
                                         </tr>
@@ -48,13 +49,15 @@
                                             <tr>
                                                 <td>@item.ID</td>
                                                 <td>@item.Ad</td>
-                                             
+                                                <td>@item.Durum</td>
+
+
                                                 <td>
                                                     <a href="/SosyalMedya/SayfaGuncelle/@item.ID" class="btn btn-info btn-sm" title="Düzenle">
                                                         <i class="fas fa-pencil-alt"> </i>
                                                     </a>
 
-                                                    <a href="/SosyalMedya/Sil/@item.ID" class="btn btn-danger btn-sm" title="Sil">
+                                                    <a href="/SosyalMedya/SayfaSil/@item.ID" class="btn btn-danger btn-sm" title="Sil">
                                                         <i class="fas fa-trash-alt"> </i>
                                                     </a>
                                                 </td>

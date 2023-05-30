@@ -6,7 +6,7 @@
 
 <h2>SayfaGuncelle</h2>
 <form method="post">
-   
+
     @Html.Label("Ad")
     @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
     <br />
@@ -15,7 +15,10 @@
     <br />
     @Html.Label("ikon")
     @Html.TextBoxFor(x => x.ikon, new { @class = "form-control" })
-<br />
+    <br />
+    @Html.Label("Durum")
+    @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
+    <br />
 
     <button class="btn btn-info"> Guncelle </button>
 
