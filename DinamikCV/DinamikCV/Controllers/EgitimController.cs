@@ -13,6 +13,7 @@ namespace DinamikCV.Controllers
     {
         // GET: Egitim
         GenericRepository<tblEgitimlerim> eRepo = new GenericRepository<tblEgitimlerim>();
+        [Authorize]
         public ActionResult Index()
         {
             var egitimlerim = eRepo.TList();
