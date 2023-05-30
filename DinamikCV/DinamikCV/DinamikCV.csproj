@@ -2366,6 +2366,7 @@
     <Content Include="Views\iletisim\Index.cshtml" />
     <Content Include="Views\Default\SosyalMedya.cshtml" />
     <Content Include="Views\SosyalMedya\Index.cshtml" />
+    <Content Include="Views\SosyalMedya\SayfaGuncelle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

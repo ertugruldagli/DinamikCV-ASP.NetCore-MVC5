@@ -28,5 +28,21 @@ namespace DinamikCV.Controllers
             sRepo.TAdd(p);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult SayfaGuncelle(int id)
+        {
+            var veriler = sRepo.Find(x=>x.ID==id);
+            return View(veriler);
+        }
+        [HttpPost]
+        public ActionResult SayfaGuncelle(tblSosyalMedya p)
+        {
+            var veriler = sRepo.Find(x => x.ID == p.ID);
+            veriler.Ad=p.Ad;    
+            veriler.Link=p.Link;    
+            veriler.ikon=p.ikon;
+            sRepo.TUpdate(veriler);
+            return RedirectToAction("Index");
+        }
     }
 }
