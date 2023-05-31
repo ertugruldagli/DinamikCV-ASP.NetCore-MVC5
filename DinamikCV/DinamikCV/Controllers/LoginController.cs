@@ -9,8 +9,10 @@ using System.Web.UI.WebControls;
 using DinamikCV.Models.Entity;
 namespace DinamikCV.Controllers
 {
+  
     public class LoginController : Controller
     {
+      
         DBCVEntities db=new DBCVEntities();
         // GET: Login
         [HttpGet]
@@ -19,13 +21,9 @@ namespace DinamikCV.Controllers
             return View();
         }
 
-        public HttpResponseBase GetResponse()
-        {
-            return Response;
-        }
 
         [HttpPost]
-        public ActionResult Index(tblAdmin p, HttpResponseBase response)
+        public ActionResult Index(tblAdmin p)
         {
             var info = db.tblAdmin.FirstOrDefault(x=>x.KullaniciAdi==p.KullaniciAdi && x.Sifre==p.Sifre);
             if (info!=null)

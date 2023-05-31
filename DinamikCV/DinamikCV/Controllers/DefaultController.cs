@@ -5,8 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using DinamikCV.Models.Entity;
 
+
 namespace DinamikCV.Controllers
 {
+    
     public class DefaultController : Controller
     {
         // GET: Default
