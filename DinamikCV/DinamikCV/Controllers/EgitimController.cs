@@ -9,6 +9,7 @@ using DinamikCV.Repositories;
 
 namespace DinamikCV.Controllers
 {
+    [Authorize]
     public class EgitimController : Controller
     {
         // GET: Egitim

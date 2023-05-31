@@ -9,7 +9,8 @@ using System.Web.UI.WebControls;
 using DinamikCV.Models.Entity;
 namespace DinamikCV.Controllers
 {
-  
+
+    [AllowAnonymous]
     public class LoginController : Controller
     {
       
@@ -36,6 +37,12 @@ namespace DinamikCV.Controllers
             {
                 return RedirectToAction("Index");
             }
+        }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index","Login");
         }
     }
 }
