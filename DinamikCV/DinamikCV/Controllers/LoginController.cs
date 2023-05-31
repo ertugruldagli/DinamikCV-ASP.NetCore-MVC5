@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.Web.Services.Description;
+using System.Web.UI.WebControls;
 using DinamikCV.Models.Entity;
 namespace DinamikCV.Controllers
 {
@@ -16,8 +18,14 @@ namespace DinamikCV.Controllers
         {
             return View();
         }
+
+        public HttpResponseBase GetResponse()
+        {
+            return Response;
+        }
+
         [HttpPost]
-        public ActionResult Index(tblAdmin p)
+        public ActionResult Index(tblAdmin p, HttpResponseBase response)
         {
             var info = db.tblAdmin.FirstOrDefault(x=>x.KullaniciAdi==p.KullaniciAdi && x.Sifre==p.Sifre);
             if (info!=null)
@@ -28,7 +36,7 @@ namespace DinamikCV.Controllers
             }
             else
             {
-                return RedirectToAction("Index","Login");
+                return RedirectToAction("Index");
             }
         }
     }
