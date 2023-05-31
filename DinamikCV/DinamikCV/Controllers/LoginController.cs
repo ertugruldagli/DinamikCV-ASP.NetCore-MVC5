@@ -7,6 +7,7 @@ using System.Web.Security;
 using System.Web.Services.Description;
 using System.Web.UI.WebControls;
 using DinamikCV.Models.Entity;
+
 namespace DinamikCV.Controllers
 {
 

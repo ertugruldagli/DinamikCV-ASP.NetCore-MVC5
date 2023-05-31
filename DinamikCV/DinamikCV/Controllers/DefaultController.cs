@@ -8,7 +8,7 @@ using DinamikCV.Models.Entity;
 
 namespace DinamikCV.Controllers
 {
-    
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default
