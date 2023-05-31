@@ -3,15 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Web.Security;
+using DinamikCV.Models.Entity;
 namespace DinamikCV.Controllers
 {
     public class LoginController : Controller
     {
+        DBCVEntities db=new DBCVEntities();
         // GET: Login
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
+        }
+        [HttpPost]
+        public ActionResult Index(tblAdmin p)
+        {
+            var info = db.tblAdmin.FirstOrDefault(x=>x.KullaniciAdi==p.KullaniciAdi && x.Sifre==p.Sifre);
+            if (info!=null)
+            {
+                FormsAuthentication.SetAuthCookie(info.KullaniciAdi, false);
+                Session["KullaniciAdi"]=info.KullaniciAdi.ToString();
+                return RedirectToAction("Index","Deneyim");
+            }
+            else
+            {
+                return RedirectToAction("Index","Login");
+            }
         }
     }
 }
