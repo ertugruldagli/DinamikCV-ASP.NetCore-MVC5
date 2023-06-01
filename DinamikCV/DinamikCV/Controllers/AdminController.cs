@@ -8,7 +8,7 @@ using DinamikCV.Repositories;
 
 namespace DinamikCV.Controllers
 {
-    [AllowAnonymous]
+   
     public class AdminController : Controller
     {
 
