@@ -1,0 +1,21 @@
+﻿@model DinamikCV.Models.Entity.tblSertifikalarım
+@{
+    ViewBag.Title = "SertifikaGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>SertifikaGuncelle</h2>
+
+
+@Html.Label("Acıklama")
+@Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+<br />
+@Html.Label("Tarih")
+@Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+<br />
+@*<h1>@ViewBag.d</h1>*@
+
+<button class="btn btn-info"> Guncelle </button>
+<a href="/Sertifika/SertifikaSil/@ViewBag.d" class="btn btn-info">Sil</a>
+
+</form>

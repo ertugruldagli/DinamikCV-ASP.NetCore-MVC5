@@ -1,0 +1,22 @@
+﻿@model DinamikCV.Models.Entity.tblAdmin
+@{
+    ViewBag.Title = "AdminDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AdminDuzenle</h2>
+
+<form method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("KullaniciAdi")
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sifre")
+    @Html.TextBoxFor(x => x.Sifre , new { @class = "form-control" })
+   
+    <br />
+    <button class="btn btn-info"> Guncelle </button>
+
+</form>

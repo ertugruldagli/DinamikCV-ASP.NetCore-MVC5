@@ -45,7 +45,7 @@ namespace DinamikCV.Controllers
             return PartialView(yeteneklerim);
         }
 
-        public PartialViewResult Hobilerim()
+        public PartialViewResult Projelerim()
         {
             var hobilerim = db.tblHobilerim.ToList();
             return PartialView(hobilerim);

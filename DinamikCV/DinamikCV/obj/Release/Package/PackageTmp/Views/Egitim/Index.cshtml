@@ -1,0 +1,38 @@
+﻿@using DinamikCV.Models.Entity
+@model List<tblEgitimlerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Eğitimlerim</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>Baslik</th>
+        <th>AltBaslik1</th>
+        <th>AltBaslik2</th>
+        <th>GNO</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Duzenle</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.ID  </td>
+            <td>@i.Baslik  </td>
+            <td>@i.AltBaslik1  </td>
+            <td>@i.AltBaslik2 </td>
+            <td>@i.GNO </td>
+            <td>@i.Tarih </td>
+            <td><a href="/Egitim/EgitimSil/@i.ID" class="btn btn-danger"> Sil</a> </td>
+            <td><a href="/Egitim/EgitimGuncelle/@i.ID" class="btn btn-warning"> Duzenle </a> </td>
+        </tr>
+
+    }
+</table>
+<a href="/Egitim/EgitimEkle/" class="btn btn-primary">  Eğitim Ekle</a>
+

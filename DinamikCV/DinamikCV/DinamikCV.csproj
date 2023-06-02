@@ -2463,7 +2463,6 @@
     <Content Include="Views\Default\Deneyim.cshtml" />
     <Content Include="Views\Default\Egitim.cshtml" />
     <Content Include="Views\Default\Yeteneklerim.cshtml" />
-    <Content Include="Views\Default\Hobilerim.cshtml" />
     <Content Include="Views\Default\Sertifikalarim.cshtml" />
     <Content Include="Views\Default\Iletisim.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
@@ -2488,6 +2487,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\AdminEkle.cshtml" />
     <Content Include="Views\Admin\AdminDuzenle.cshtml" />
+    <Content Include="Views\Default\Projelerim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
