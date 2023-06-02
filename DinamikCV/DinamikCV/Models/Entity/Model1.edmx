@@ -13,6 +13,15 @@
           <Property Name="KullaniciAdi" Type="varchar" MaxLength="20" />
           <Property Name="Sifre" Type="varchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="tblCalismalarProjeler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Konu" Type="varchar" MaxLength="150" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="600" />
+        </EntityType>
         <EntityType Name="tblDeneyimlerim">
           <Key>
             <PropertyRef Name="ID" />
@@ -94,6 +103,7 @@
         </EntityType>
         <EntityContainer Name="DBCVModelStoreContainer">
           <EntitySet Name="tblAdmin" EntityType="Self.tblAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCalismalarProjeler" EntityType="Self.tblCalismalarProjeler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblDeneyimlerim" EntityType="Self.tblDeneyimlerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblEgitimlerim" EntityType="Self.tblEgitimlerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblHakkimda" EntityType="Self.tblHakkimda" Schema="dbo" store:Type="Tables" />
@@ -194,6 +204,7 @@
           <EntitySet Name="tblSertifikalarım" EntityType="Self.tblSertifikalarım" />
           <EntitySet Name="tblYeteneklerim" EntityType="Self.tblYeteneklerim" />
           <EntitySet Name="tblSosyalMedya" EntityType="DBCVModel.tblSosyalMedya" />
+          <EntitySet Name="tblCalismalarProjeler" EntityType="DBCVModel.tblCalismalarProjeler" />
         </EntityContainer>
         <EntityType Name="tblSosyalMedya">
           <Key>
@@ -204,6 +215,15 @@
           <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ikon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Durum" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tblCalismalarProjeler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Konu" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -303,6 +323,16 @@
                 <ScalarProperty Name="ikon" ColumnName="ikon" />
                 <ScalarProperty Name="Link" ColumnName="Link" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCalismalarProjeler">
+            <EntityTypeMapping TypeName="DBCVModel.tblCalismalarProjeler">
+              <MappingFragment StoreEntitySet="tblCalismalarProjeler">
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Konu" ColumnName="Konu" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
