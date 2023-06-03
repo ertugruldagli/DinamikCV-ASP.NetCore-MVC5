@@ -56,14 +56,6 @@
           <Property Name="Aciklama" Type="varchar(max)" />
           <Property Name="Resim" Type="varchar" MaxLength="100" />
         </EntityType>
-        <EntityType Name="tblHobilerim">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Aciklama1" Type="varchar" MaxLength="500" />
-          <Property Name="Aciklama2" Type="varchar" MaxLength="500" />
-        </EntityType>
         <EntityType Name="tbliletisim">
           <Key>
             <PropertyRef Name="ID" />
@@ -107,7 +99,6 @@
           <EntitySet Name="tblDeneyimlerim" EntityType="Self.tblDeneyimlerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblEgitimlerim" EntityType="Self.tblEgitimlerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblHakkimda" EntityType="Self.tblHakkimda" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tblHobilerim" EntityType="Self.tblHobilerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbliletisim" EntityType="Self.tbliletisim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblSertifikalarım" EntityType="Self.tblSertifikalarım" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblSosyalMedya" EntityType="Self.tblSosyalMedya" Schema="dbo" store:Type="Tables" />
@@ -159,14 +150,6 @@
           <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="tblHobilerim">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Aciklama1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="Aciklama2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="tbliletisim">
           <Key>
             <PropertyRef Name="ID" />
@@ -199,7 +182,6 @@
           <EntitySet Name="tblDeneyimlerim" EntityType="Self.tblDeneyimlerim" />
           <EntitySet Name="tblEgitimlerim" EntityType="Self.tblEgitimlerim" />
           <EntitySet Name="tblHakkimda" EntityType="Self.tblHakkimda" />
-          <EntitySet Name="tblHobilerim" EntityType="Self.tblHobilerim" />
           <EntitySet Name="tbliletisim" EntityType="Self.tbliletisim" />
           <EntitySet Name="tblSertifikalarım" EntityType="Self.tblSertifikalarım" />
           <EntitySet Name="tblYeteneklerim" EntityType="Self.tblYeteneklerim" />
@@ -274,15 +256,6 @@
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
                 <ScalarProperty Name="Resim" ColumnName="Resim" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblHobilerim">
-            <EntityTypeMapping TypeName="DBCVModel.tblHobilerim">
-              <MappingFragment StoreEntitySet="tblHobilerim">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
-                <ScalarProperty Name="Aciklama2" ColumnName="Aciklama2" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

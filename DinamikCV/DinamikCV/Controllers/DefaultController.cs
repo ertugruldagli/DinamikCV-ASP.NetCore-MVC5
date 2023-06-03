@@ -45,10 +45,10 @@ namespace DinamikCV.Controllers
             return PartialView(yeteneklerim);
         }
 
-        public PartialViewResult Projelerim()
+        public PartialViewResult CalismalarProjeler()
         {
-            var hobilerim = db.tblHobilerim.ToList();
-            return PartialView(hobilerim);
+            var projeler = db.tblCalismalarProjeler.ToList();
+            return PartialView(projeler);
         }
         public PartialViewResult Sertifikalarim()
         {

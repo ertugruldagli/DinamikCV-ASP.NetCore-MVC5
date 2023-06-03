@@ -29,7 +29,6 @@ namespace DinamikCV.Models.Entity
         public virtual DbSet<tblDeneyimlerim> tblDeneyimlerim { get; set; }
         public virtual DbSet<tblEgitimlerim> tblEgitimlerim { get; set; }
         public virtual DbSet<tblHakkimda> tblHakkimda { get; set; }
-        public virtual DbSet<tblHobilerim> tblHobilerim { get; set; }
         public virtual DbSet<tbliletisim> tbliletisim { get; set; }
         public virtual DbSet<tblSertifikalarım> tblSertifikalarım { get; set; }
         public virtual DbSet<tblYeteneklerim> tblYeteneklerim { get; set; }
