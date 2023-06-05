@@ -49,9 +49,9 @@ namespace DinamikCV.Controllers
         {
             var veriler = sRepo.Find(x => x.ID == id);
             veriler.Durum = false;
-            sRepo.TUpdate(veriler);
+            sRepo.TRemove(veriler);
             return RedirectToAction("Index");
-            return View(veriler);
+           
         }
     }
 }

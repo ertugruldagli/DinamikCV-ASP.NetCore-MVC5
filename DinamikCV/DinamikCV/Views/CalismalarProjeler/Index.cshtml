@@ -1,0 +1,39 @@
+﻿@using DinamikCV.Models.Entity
+@model List<tblCalismalarProjeler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+
+<h2>Çalışma ve Projelerim </h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>Baslik</th>
+        <th>Konu</th>
+        <th>Aciklama</th>
+        <th>Sil</th>
+        <th>Duzenle</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.ID  </td>
+            <td>@i.Baslik  </td>
+            <td>@i.Konu  </td>
+            <td>@i.Aciklama </td>
+            <td><a href="/CalismalarProjeler/CalismalarSil/@i.ID" class="btn btn-danger"> Sil</a> </td>
+            <td><a href="/CalismalarProjeler/CalismalarGuncelle/@i.ID" class="btn btn-warning"> Duzenle </a> </td>
+        </tr>
+
+    }
+</table>
+<a href="/CalismalarProjeler/CalismalarEkle/" class="btn btn-primary"> Yeni Çalışma Ekle</a>
+
+
+

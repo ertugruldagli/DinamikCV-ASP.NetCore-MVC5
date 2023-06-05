@@ -6,7 +6,7 @@ using System.Web;
 
 namespace DinamikCV.Repositories
 {
-    public class CalismalarProjeler:GenericRepository<tblCalismalarProjeler>
+    public class CalismalarProjelerRepository:GenericRepository<tblCalismalarProjeler>
     {
     }
 }
