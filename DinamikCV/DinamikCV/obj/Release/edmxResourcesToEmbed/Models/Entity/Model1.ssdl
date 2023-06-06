@@ -8,6 +8,15 @@
     <Property Name="KullaniciAdi" Type="varchar" MaxLength="20" />
     <Property Name="Sifre" Type="varchar" MaxLength="20" />
   </EntityType>
+  <EntityType Name="tblCalismalarProjeler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Konu" Type="varchar" MaxLength="150" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="600" />
+  </EntityType>
   <EntityType Name="tblDeneyimlerim">
     <Key>
       <PropertyRef Name="ID" />
@@ -41,14 +50,6 @@
     <Property Name="Mail" Type="varchar" MaxLength="30" />
     <Property Name="Aciklama" Type="varchar(max)" />
     <Property Name="Resim" Type="varchar" MaxLength="100" />
-  </EntityType>
-  <EntityType Name="tblHobilerim">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Aciklama1" Type="varchar" MaxLength="500" />
-    <Property Name="Aciklama2" Type="varchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="tbliletisim">
     <Key>
@@ -89,10 +90,10 @@
   </EntityType>
   <EntityContainer Name="DBCVModelStoreContainer">
     <EntitySet Name="tblAdmin" EntityType="Self.tblAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCalismalarProjeler" EntityType="Self.tblCalismalarProjeler" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblDeneyimlerim" EntityType="Self.tblDeneyimlerim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblEgitimlerim" EntityType="Self.tblEgitimlerim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblHakkimda" EntityType="Self.tblHakkimda" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblHobilerim" EntityType="Self.tblHobilerim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbliletisim" EntityType="Self.tbliletisim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblSertifikalarım" EntityType="Self.tblSertifikalarım" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblSosyalMedya" EntityType="Self.tblSosyalMedya" Schema="dbo" store:Type="Tables" />

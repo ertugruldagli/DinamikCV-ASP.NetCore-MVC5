@@ -1,0 +1,23 @@
+﻿@model DinamikCV.Models.Entity.tblCalismalarProjeler
+@{
+    ViewBag.Title = "CalismalarEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Çalışma ve Proje Ekle</h2>
+
+<form method="post">
+@Html.Label("Başlık")
+@Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+<br />
+@Html.Label("Konu")
+@Html.TextBoxFor(x => x.Konu, new { @class = "form-control" })
+<br />
+@Html.Label("Açıklama")
+@Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+<br />
+
+
+<button class="btn btn-info"> Kaydet </button>
+
+</form>

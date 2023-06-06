@@ -9,11 +9,11 @@
         <EntityTypeShape EntityType="DBCVModel.tblDeneyimlerim" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBCVModel.tblEgitimlerim" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBCVModel.tblHakkimda" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBCVModel.tblHobilerim" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBCVModel.tbliletisim" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBCVModel.tblSertifikalarım" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBCVModel.tblYeteneklerim" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBCVModel.tblSosyalMedya" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="DBCVModel.tblCalismalarProjeler" Width="1.5" PointX="0.75" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

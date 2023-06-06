@@ -42,14 +42,6 @@
     <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="tblHobilerim">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Aciklama1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Name="Aciklama2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-  </EntityType>
   <EntityType Name="tbliletisim">
     <Key>
       <PropertyRef Name="ID" />
@@ -82,11 +74,11 @@
     <EntitySet Name="tblDeneyimlerim" EntityType="Self.tblDeneyimlerim" />
     <EntitySet Name="tblEgitimlerim" EntityType="Self.tblEgitimlerim" />
     <EntitySet Name="tblHakkimda" EntityType="Self.tblHakkimda" />
-    <EntitySet Name="tblHobilerim" EntityType="Self.tblHobilerim" />
     <EntitySet Name="tbliletisim" EntityType="Self.tbliletisim" />
     <EntitySet Name="tblSertifikalarım" EntityType="Self.tblSertifikalarım" />
     <EntitySet Name="tblYeteneklerim" EntityType="Self.tblYeteneklerim" />
     <EntitySet Name="tblSosyalMedya" EntityType="DBCVModel.tblSosyalMedya" />
+    <EntitySet Name="tblCalismalarProjeler" EntityType="DBCVModel.tblCalismalarProjeler" />
   </EntityContainer>
   <EntityType Name="tblSosyalMedya">
     <Key>
@@ -97,5 +89,14 @@
     <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ikon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Durum" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblCalismalarProjeler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Konu" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

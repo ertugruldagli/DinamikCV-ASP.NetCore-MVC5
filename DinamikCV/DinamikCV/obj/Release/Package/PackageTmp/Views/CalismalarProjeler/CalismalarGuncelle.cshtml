@@ -1,0 +1,24 @@
+﻿@model DinamikCV.Models.Entity.tblCalismalarProjeler
+@{
+    ViewBag.Title = "CalismalarGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>CalismalarGuncelle</h2>
+
+<form method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Baslik")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Konu")
+    @Html.TextBoxFor(x => x.Konu, new { @class = "form-control" })
+    <br />
+    @Html.Label("Aciklama")
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info"> Guncelle </button>
+
+</form>

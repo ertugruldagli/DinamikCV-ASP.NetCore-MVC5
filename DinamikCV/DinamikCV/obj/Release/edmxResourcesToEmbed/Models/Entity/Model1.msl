@@ -47,15 +47,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tblHobilerim">
-      <EntityTypeMapping TypeName="DBCVModel.tblHobilerim">
-        <MappingFragment StoreEntitySet="tblHobilerim">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
-          <ScalarProperty Name="Aciklama2" ColumnName="Aciklama2" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tbliletisim">
       <EntityTypeMapping TypeName="DBCVModel.tbliletisim">
         <MappingFragment StoreEntitySet="tbliletisim">
@@ -93,6 +84,16 @@
           <ScalarProperty Name="ikon" ColumnName="ikon" />
           <ScalarProperty Name="Link" ColumnName="Link" />
           <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCalismalarProjeler">
+      <EntityTypeMapping TypeName="DBCVModel.tblCalismalarProjeler">
+        <MappingFragment StoreEntitySet="tblCalismalarProjeler">
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
